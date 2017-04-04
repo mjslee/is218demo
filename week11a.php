@@ -1,6 +1,6 @@
 <?php
 
-	include_once 'pdo-connect.php';
+	include_once 'week11-pdoConnect.php';
 	
 	$result = prepareAndExecute('SELECT * FROM accounts WHERE email = ?', array("mjlee@njit.edu")); 
 
