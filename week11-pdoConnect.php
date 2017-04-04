@@ -5,7 +5,7 @@ $db = NULL;
 // Let's connect to a database
 // Order of db connection: Heroku mySQL Database --> Local mySQL Database
 // Check to see if we are on a Heroku Server by checking for an environmental variable with db data
-if (!(getenv('JAWSDB_URL') == null)) {
+if ((getenv('JAWSDB_URL') != null)) {
 	
 	$dbparts = parse_url(getenv('JAWSDB_URL'));
 	$hostname = $dbparts['host'];
