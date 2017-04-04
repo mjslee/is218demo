@@ -33,7 +33,7 @@ else {
 
 	try {
 		$db = new PDO("mysql:host=$hostname;dbname=$database", $username, $password, array(PDO::MYSQL_ATTR_FOUND_ROWS => true));
-		$mysqlLocal = true;
+		
 	}
 	catch (PDOException $e) {
 		http_error(500, "Internal Server Error", "We couldn't connect to a local(host) MySQL database.");
