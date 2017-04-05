@@ -29,7 +29,7 @@ else {
 	$hostname = "localhost";
 	$username = "root";
 	$password = "mypassword";
-	$database = "is219demo";
+	$database = "is218demo";
 
 	try {
 		$db = new PDO("mysql:host=$hostname;dbname=$database", $username, $password, array(PDO::MYSQL_ATTR_FOUND_ROWS => true));
