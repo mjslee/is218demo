@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.25)
 # Database: is218final
-# Generation Time: 2017-04-29 06:44:41 +0000
+# Generation Time: 2017-04-29 19:35:12 +0000
 # ************************************************************
 
 
@@ -23,6 +23,8 @@
 # Dump of table accounts
 # ------------------------------------------------------------
 
+DROP TABLE IF EXISTS `accounts`;
+
 CREATE TABLE `accounts` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `email` varchar(60) DEFAULT NULL,
@@ -33,7 +35,7 @@ CREATE TABLE `accounts` (
   `gender` varchar(20) DEFAULT NULL,
   `password` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `accounts` WRITE;
 /*!40000 ALTER TABLE `accounts` DISABLE KEYS */;
@@ -50,6 +52,8 @@ UNLOCK TABLES;
 # Dump of table todos
 # ------------------------------------------------------------
 
+DROP TABLE IF EXISTS `todos`;
+
 CREATE TABLE `todos` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `owneremail` varchar(60) DEFAULT NULL,
@@ -59,7 +63,7 @@ CREATE TABLE `todos` (
   `message` text,
   `isdone` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `todos` WRITE;
 /*!40000 ALTER TABLE `todos` DISABLE KEYS */;
